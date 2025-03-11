@@ -69,8 +69,148 @@ You may download Taskonomy RGB images as the dataset from [website](http://tasko
 You may download SST-2 dataset in `./dataset/SST2`.
 
 ## 🟨 How to Run
-#### 1. Download NAS Benchmarks
-put them on `./designspace/NAS-Bench-201/`, `./designspace/NATS-Bench-SSS/`, and `./designsoace/NDS/`, respectively.
+### 1. Download NAS Benchmarks
+put them on `./designspace/NAS-Bench-201/`, `./designspace/NATS-Bench-SSS/`, `./designsoace/NDS/`, `./designsoace/Trans_Macro/`, `./designsoace/Trans_Micro/`, or `./designsoace/NAFBee/`.
 
+### 2. Set parameters
+For NAS-Bench-201 or NATS-Bench-SSS,
+please set `batch size` for RBFleX-NAS, `dataset`, `number of trials`, and `a number of networks` selected randomly from benchmark
+```python
+# ==============================================
+# GLOBAL VARIABLE: Batch size for RBFleX-NAS
+# ==============================================
+batch_size_NE = 3
 
+# ==============================================
+# GLOBAL VARIABLE: Experiment for RBFleX-NAS
+# - cifar10
+# - cifar100
+# - ImageNet16-120
+# ==============================================
+dataset = 'cifar10'
 
+# ==============================================
+# GLOBAL VARIABLE: Experiment for RBFleX-NAS
+# maxtrials: a number of trials
+# Num_Networks: a number of networks selected randomly from benchmark
+# ==============================================
+maxtrials = 10
+Num_Networks = 1000
+```
+
+For TransNAS-Bench-101 (Micro and Macro),
+Please set `DESIGN SPACE CONFIGURATION` and `batch size` for RBFleX-NAS
+```python
+# ==============================================
+# GLOBAL VARIABLE: DESIGN SPACE CONFIGURATION
+# - config_macs_transmicrosegmentsemantic
+# - config_macs_transmicroautoencoder
+# - config_macs_transmicroclassobject
+# - config_macs_transmicroclassscene
+# - config_macs_transmicrojigsaw
+# - config_macs_transmicronormal
+# - config_macs_transmicroroomlayout
+# ==============================================
+CONFIG_PATH = "config_macs_transmicrosegmentsemantic"
+
+# ==============================================
+# GLOBAL VARIABLE: Batch size for RBFleX-NAS
+# ==============================================
+batch_size_NE = 3
+```
+
+For NAFBee(BERT),
+Please set `batch size` for RBFleX-NAS
+```python
+# ==============================================
+# GLOBAL VARIABLE: Batch size for RBFleX-NAS
+# ==============================================
+batch_size_NE = 3
+```
+
+### 3. Run an experiment to reproduce a result
+#### The following programs use the fixed hyperparameters for RBF kernels. (2.68690173088039e-12 for Activation, 1.02460061284506e-11 for final input)
+For NAS-Bench-201 or NATS-Bench-SSS,
+```python
+python RBFleX_NAS-Bench-201.py
+
+# or
+
+python RBFleX_NATS-Bench-SSS.py
+```
+
+For TransNAS-Bench-101 (Micro and Macro),
+```python
+python RBFleX_TransNAS_Macro.py
+
+# or
+
+python RBFleX_TransNAS_Micro.py
+```
+
+#### This program runs with the hyperparameter detection algorithm (HDA) proposed in the RBFleX-NAS paper.
+For NAFBee(BERT),
+```python
+python RBFleX_NAFBee_BERT.py
+```
+
+## 🟨 Hyperparameter Detection Algorithm (HDA)
+RBFleX-NAS uses RBF kernels to evaluate the similarities of activation outputs and final inputs. However, an RBF kernel is sensitive to the hyperparameter GAMMA. Therefore, RBFleX-NAS detects the optimal hyperparameters based on measured features. You may run the hyperparameter detection algorithm (HDA) like
+```python
+python HDA.py
+```
+
+Note: `HDA.py` is an example for NATS-Bench-SSS. If you want to leverage HDA to other design space, please set these configurations. `N_GAMMA` is a number of networks to detect hyperparameter for an RBF kernel. `searchspace` is a design space for `./designspace/NAS-Bench-201/`, `./designspace/NATS-Bench-SSS/`, `./designsoace/NDS/`, `./designsoace/Trans_Macro/`, `./designsoace/Trans_Micro/`, or `./designsoace/NAFBee/`. Please refer these GitHub page to understand how to define search space.
+```python
+# ==============================================
+# GLOBAL VARIABLE: 
+# Batch size for RBFleX-NAS
+# N_GAMMA: Number of networks to detect hyperparameter for RBF kernel
+# ==============================================
+batch_size_NE = 3
+N_GAMMA = 10
+
+# ==============================================
+# GLOBAL VARIABLE: Experiment for RBFleX-NAS
+# - cifar10
+# - cifar100
+# - ImageNet16-120
+# ==============================================
+dataset = 'cifar10'
+
+# ==============================================
+# GLOBAL VARIABLE: create a searchspace
+# This example is NATS-Bench-SSS
+# ==============================================
+benchmark_root = "./designspace/NATS-Bench-SSS/NATS-sss-v1_0-50262-simple"
+# NAS Benchmark
+print('Loading...NAT Bench '+"sss")
+searchspace = create(benchmark_root, "sss", fast_mode=True, verbose=False)
+
+# ==============================================
+# GLOBAL VARIABLE: create a dataloader
+# This example is cifar-10
+# ==============================================
+img_root = "./dataset"
+print('==> Preparing data..')
+transform_train = transforms.Compose([
+    transforms.RandomCrop(32, padding=4),
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+])
+imgset = torchvision.datasets.CIFAR10(
+        root=img_root+'/cifar10', train=True, download=True, transform=transform_train)
+img_loader = torch.utils.data.DataLoader(
+        imgset, batch_size=batch_size_NE, shuffle=True, num_workers=1, pin_memory=True)
+
+```
+
+## 🟨 Citing RBFleX-NAS
+If you use RBFleX, please cite the following paper:
+```
+XXXX
+```
+
+## 🟨 Licence
+[MIT Licence](https://en.wikipedia.org/wiki/MIT_License)
