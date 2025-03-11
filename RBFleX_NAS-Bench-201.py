@@ -37,7 +37,6 @@ benchmark_root = "./designspace/NAS-Bench-201/NATS-tss-v1_0-3ffb9-simple"
 
 
 img_root = "./dataset"
-batch_size_NE = 3
 if "sss" in benchmark_root:
   design_space = "sss"
   hp = "90"
