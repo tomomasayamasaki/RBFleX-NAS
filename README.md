@@ -209,7 +209,7 @@ img_loader = torch.utils.data.DataLoader(
 ## 🟨 Citing RBFleX-NAS
 If you use RBFleX, please cite the following paper:
 ```
-XXXX
+Coming Soon...
 ```
 
 ## 🟨 Licence
