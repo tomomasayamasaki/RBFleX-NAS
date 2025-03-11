@@ -24,7 +24,7 @@ Furthermore, we propose NAFBee, a new activation design space that extends the a
 - numpy
 - torchvision
 - torch
-- 
+- scipy
 
 
 ## 🟨 Download NAS Benchmarks
@@ -36,4 +36,4 @@ To download the latest version, please visit the GitHub page of [NATS-Bench: Ben
 To download NDS benchmark json files, please visit the GitHub page of [On Network Design Spaces for Visual Recognition](https://github.com/facebookresearch/nds). You can download the benchmark json files from [this link](https://dl.fbaipublicfiles.com/nds/data.zip). After downloading these json files, please store all of json files on `./designsoace/NDS/`
 
 ### TransNAS-Bench-101
-
+To download TransNAS-Bench-101 benchmark, please visit the GitHub page of [TransNAS-Bench-101: Improving Transferability and Generalizability of Cross-Task Neural Architecture Search](https://github.com/yawen-d/TransNASBench). 
