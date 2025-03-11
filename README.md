@@ -29,6 +29,7 @@ Furthermore, we propose NAFBee, a new activation design space that extends the a
 - torchvision
 - torch
 - scipy
+- nats_bench
 
 
 ## 🟨 Download NAS Benchmarks
