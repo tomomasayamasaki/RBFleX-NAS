@@ -63,8 +63,10 @@ You may download a training set of ImageNet from [here](https://www.image-net.or
 If you use ImageNet16-120 for NATS-Bench, please store the dataset in `./dataset/ImageNet16`. NATS-Bench GitHub explains the ImageNet16-120 dataset.
 
 ### Taskonomy for TransNAS-Bench-101
+You may download Taskonomy RGB images as the dataset from [website](http://taskonomy.stanford.edu), and then put them in `./dataset/TASKONOMY/rgb`.
 
 ### SST-2 for NAFBee(BERT)
+You may download SST-2 dataset in `./dataset/SST-2`.
 
 
 
