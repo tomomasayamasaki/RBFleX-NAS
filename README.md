@@ -2,7 +2,7 @@
     <img src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/logo.png" alt="Tomo logo" title="Tomo" align="right" height="110" />
 </a>
 
-# RBFleX-NAS
+# RBFleX-NAS : Training-Free Neural Architecture Search Using Radial Basis Function Kernel and Hyperparameter Detection
 Training-Free Neural Architecture Search (NAS) Using Radial Basis Function (RBF) Kernel 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
