@@ -53,22 +53,18 @@ To download NAFBee, please visit the GitHub Page of [NAFBee](https://github.com/
 Our program works with three major datasets: CIFAR-10, CIFAR-100, ImageNet, Taskonomy, and SST-2.
 
 ### CIFAR-10 for NATS-Bench, NDS, and NAFBee(VGG-19)
-This dataset is automatically downloaded on `./dataset/CIFAR10` by PyTorch after running our program. If you already have CIFAR-10 dataset in your environment, you may set your dataset path on root on each main program as follows.
-```python
-trainset = torchvision.datasets.CIFAR10(root='YOUR DATASET PATH', train=True, download=True, transform=transform_train)
-```
+This dataset is automatically downloaded on `./dataset/cifar10` by PyTorch after running our program. If you already have CIFAR-10 dataset in your environment, you may set your dataset path on root on each main program as follows.
 
 ### CIFAR-100 for NATS-Bench
-This dataset is automatically downloaded on `./dataset/CIFAR100` by PyTorch after running our program. If you already have CIFAR-100 dataset in your environment, you may set your dataset path on root on each main program as follows.
-```python
-cifar100_training = torchvision.datasets.CIFAR100(root='YOUR DATASET PATH', train=True, download=True, transform=transform_train)
-```
+This dataset is automatically downloaded on `./dataset/cifar100` by PyTorch after running our program. If you already have CIFAR-100 dataset in your environment, you may set your dataset path on root on each main program as follows.
 
 ### ImageNet or ImageNet16-120 for NATS-Bench and NDS
 You may download a training set of ImageNet from [here](https://www.image-net.org). Before downloading, you should create an account on the website. After downloading it, please store the dataset in `./dataset/ImageNet`.
-```python
-train_root = 'YOUR DATASET PATH/ILSVRC2012_img_train'
-```
+If you use ImageNet16-120 for NATS-Bench, please store the dataset in `./dataset/ImageNet16`. NATS-Bench GitHub explains the ImageNet16-120 dataset.
+
+### Taskonomy for TransNAS-Bench-101
+
+### SST-2 for NAFBee(BERT)
 
 
 
