@@ -40,4 +40,8 @@ To download the latest version, please visit the GitHub page of [NATS-Bench: Ben
 To download NDS benchmark json files, please visit the GitHub page of [On Network Design Spaces for Visual Recognition](https://github.com/facebookresearch/nds). You can download the benchmark json files from [this link](https://dl.fbaipublicfiles.com/nds/data.zip). After downloading these json files, please store all of json files on `./designsoace/NDS/`
 
 ### TransNAS-Bench-101
-To download TransNAS-Bench-101 benchmark, please visit the GitHub page of [TransNAS-Bench-101: Improving Transferability and Generalizability of Cross-Task Neural Architecture Search](https://github.com/yawen-d/TransNASBench). 
+TransNAS-Bench-101 is put on this GitHub. You may not download TransNAS-Bench-101. To know the detail of TransNAS-Bench-101 benchmark, please visit the GitHub page of [TransNAS-Bench-101: Improving Transferability and Generalizability of Cross-Task Neural Architecture Search](https://github.com/yawen-d/TransNASBench). 
+
+### NAFBee: Neural Network Activation Function Benchmark
+This is a benchmark for networks with a variety of activation functions based on VGG-19 and BERT. NAFBee provides network information and accuracy. Users can obtain the accuracy without training.
+To download NAFBee, please visit the GitHub Page of [NAFBee](https://github.com/tomomasayamasaki/NAFBee).
