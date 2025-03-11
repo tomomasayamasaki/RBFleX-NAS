@@ -9,8 +9,4 @@ Training-Free Neural Architecture Search (NAS) Using Radial Basis Function (RBF)
 ![](https://img.shields.io/github/languages/count/tomomasayamasaki/RBF-kernel-based-NAS)
 
 ## 🟨 What is RBFleX-NAS
-<table>
-<tr>
-<td><img src="https://github.com/tomomasayamasaki/RBFleX-NAS/blob/main/fig/ch2_gatescore_v4.png"></td>
-</tr>
-</table>
+![](png/overview.png)
