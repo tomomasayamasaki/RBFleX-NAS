@@ -66,7 +66,11 @@ If you use ImageNet16-120 for NATS-Bench, please store the dataset in `./dataset
 You may download Taskonomy RGB images as the dataset from [website](http://taskonomy.stanford.edu), and then put them in `./dataset/TASKONOMY/rgb`.
 
 ### SST-2 for NAFBee(BERT)
-You may download SST-2 dataset in `./dataset/SST-2`.
+You may download SST-2 dataset in `./dataset/SST2`.
+
+## 🟨 How to Run
+#### 1. Download NAS Benchmarks
+put them on `./designspace/NAS-Bench-201/`, `./designspace/NATS-Bench-SSS/`, and `./designsoace/NDS/`, respectively.
 
 
 
