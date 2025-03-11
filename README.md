@@ -46,7 +46,7 @@ TransNAS-Bench-101 is put on this GitHub. You may not download TransNAS-Bench-10
 
 ### NAFBee: Neural Network Activation Function Benchmark
 This is a benchmark for networks with a variety of activation functions based on VGG-19 and BERT. NAFBee provides network information and accuracy. Users can obtain the accuracy without training.
-To download NAFBee, please visit the GitHub Page of [NAFBee](https://github.com/tomomasayamasaki/NAFBee).
+To download NAFBee, please visit the GitHub Page of [NAFBee](https://github.com/tomomasayamasaki/NAFBee). NAFBee is stored on `./designsoace/NAFBee/`
 
 
 ## 🟨 Download image dataset
