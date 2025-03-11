@@ -13,7 +13,7 @@ Training-Free Neural Architecture Search (NAS) Using Radial Basis Function (RBF)
 ![](https://img.shields.io/github/languages/count/tomomasayamasaki/RBF-kernel-based-NAS)
 
 ## 🟨 Download the paper
-IEEE Explore:
+Coming Soon...from IEEE Transactions on Neural Networks and Learning Systems.
 
 ## 🟨 What is RBFleX-NAS
 ![](png/overview.png)
@@ -33,6 +33,7 @@ Furthermore, we propose NAFBee, a new activation design space that extends the a
 
 ## 🟨 Download NAS Benchmarks
 Our program works for [NAS-Bench-201 (NATS-Bench-TSS)](https://arxiv.org/abs/2001.00326), [NATS-Bench-SSS](https://arxiv.org/abs/2009.00437), [Network Design Space](https://arxiv.org/abs/1905.13214), and [TransNAS-Bench-101](https://arxiv.org/abs/2105.11871). If you want to apply our NAS algorithm, edit our program to meet other NAS benchmarks.
+
 ### NATS-Bench
 To download the latest version, please visit the GitHub page of [NATS-Bench: Benchmarking NAS Algorithms for Architecture Topology and Size](https://github.com/D-X-Y/NATS-Bench). You can download the benchmark tar file of `NATS-tss-v1_0-3ffb9-simple.tar` and `NATS-sss-v1_0-50262-simple.tar` from [Google drive](https://drive.google.com/drive/folders/1zjB6wMANiKwB2A1yil2hQ8H_qyeSe2yt). After downloading these benchmark tar files, please store "NATS-tss-v1_0-3ffb9-simple.tar" on `./designspace/NAS-Bench-201/` and "NATS-sss-v1_0-50262-simple.tar" on `./designspace/NATS-Bench-SSS/`, respectively. And then, you may uncompress them by running `tar xvf NATS-tss-v1_0-3ffb9-simple.tar` and `tar xvf NATS-sss-v1_0-50262-simple.tar`.
 
@@ -40,8 +41,33 @@ To download the latest version, please visit the GitHub page of [NATS-Bench: Ben
 To download NDS benchmark json files, please visit the GitHub page of [On Network Design Spaces for Visual Recognition](https://github.com/facebookresearch/nds). You can download the benchmark json files from [this link](https://dl.fbaipublicfiles.com/nds/data.zip). After downloading these json files, please store all of json files on `./designsoace/NDS/`
 
 ### TransNAS-Bench-101
-TransNAS-Bench-101 is put on this GitHub. You may not download TransNAS-Bench-101. To know the detail of TransNAS-Bench-101 benchmark, please visit the GitHub page of [TransNAS-Bench-101: Improving Transferability and Generalizability of Cross-Task Neural Architecture Search](https://github.com/yawen-d/TransNASBench). 
+TransNAS-Bench-101 is put on this GitHub. You may not download TransNAS-Bench-101. To know the detail of TransNAS-Bench-101 benchmark, please visit the GitHub page of [TransNAS-Bench-101: Improving Transferability and Generalizability of Cross-Task Neural Architecture Search](https://github.com/yawen-d/TransNASBench). TransNAS-Bench-101 is stored on `./designsoace/Trans_Macro/` for Macro-level design space and `./designsoace/Trans_Micro/` for cell-level design space.
 
 ### NAFBee: Neural Network Activation Function Benchmark
 This is a benchmark for networks with a variety of activation functions based on VGG-19 and BERT. NAFBee provides network information and accuracy. Users can obtain the accuracy without training.
 To download NAFBee, please visit the GitHub Page of [NAFBee](https://github.com/tomomasayamasaki/NAFBee).
+
+
+## 🟨 Download image dataset
+Our program works with three major datasets: CIFAR-10, CIFAR-100, ImageNet, Taskonomy, and SST-2.
+
+### CIFAR-10 for NATS-Bench, NDS, and NAFBee(VGG-19)
+This dataset is automatically downloaded on `./dataset/CIFAR10` by PyTorch after running our program. If you already have CIFAR-10 dataset in your environment, you may set your dataset path on root on each main program as follows.
+```python
+trainset = torchvision.datasets.CIFAR10(root='YOUR DATASET PATH', train=True, download=True, transform=transform_train)
+```
+
+### CIFAR-100 for NATS-Bench
+This dataset is automatically downloaded on `./dataset/CIFAR100` by PyTorch after running our program. If you already have CIFAR-100 dataset in your environment, you may set your dataset path on root on each main program as follows.
+```python
+cifar100_training = torchvision.datasets.CIFAR100(root='YOUR DATASET PATH', train=True, download=True, transform=transform_train)
+```
+
+### ImageNet or ImageNet16-120 for NATS-Bench and NDS
+You may download a training set of ImageNet from [here](https://www.image-net.org). Before downloading, you should create an account on the website. After downloading it, please store the dataset in `./dataset/ImageNet`.
+```python
+train_root = 'YOUR DATASET PATH/ILSVRC2012_img_train'
+```
+
+
+
