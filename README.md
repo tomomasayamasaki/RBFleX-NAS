@@ -15,7 +15,7 @@ Training-Free Neural Architecture Search (NAS) Using Radial Basis Function (RBF)
 ![](https://img.shields.io/github/languages/count/tomomasayamasaki/RBFleX-NAS)
 
 ## 🟨 Download the paper
-Coming Soon...from IEEE Transactions on Neural Networks and Learning Systems.
+https://ieeexplore.ieee.org/document/10959729
 
 ## 🟨 What is RBFleX-NAS
 ![](png/overview.png)
