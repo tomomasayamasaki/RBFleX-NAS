@@ -213,7 +213,17 @@ img_loader = torch.utils.data.DataLoader(
 ## 🟨 Citing RBFleX-NAS
 If you use RBFleX, please cite the following paper:
 ```
-Coming Soon...
+@ARTICLE{10959729,
+  author={Yamasaki, Tomomasa and Wang, Zhehui and Luo, Tao and Chen, Niangjun and Wang, Bo},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={RBFleX-NAS: Training-Free Neural Architecture Search Using Radial Basis Function Kernel and Hyperparameter Detection}, 
+  year={2025},
+  volume={36},
+  number={6},
+  pages={10057-10071},
+  keywords={Accuracy;Training;Vectors;Kernel;Feature extraction;Correlation;Computer architecture;Benchmark testing;Predictive models;Neural architecture search;Activation;neural architecture search (NAS);radial basis function (RBF);training-free},
+  doi={10.1109/TNNLS.2025.3552693}}
+
 ```
 
 ## 🟨 Licence
