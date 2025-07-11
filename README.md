@@ -13,6 +13,12 @@ Training-Free Neural Architecture Search (NAS) Using Radial Basis Function (RBF)
 ![](https://img.shields.io/github/commit-activity/y/tomomasayamasaki/RBFleX-NAS)
 ![](https://img.shields.io/github/last-commit/tomomasayamasaki/RBFleX-NAS)
 ![](https://img.shields.io/github/languages/count/tomomasayamasaki/RBFleX-NAS)
+![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=tomomasayamasaki.RBFleX-NAS)
+![Training-Free NAS](https://img.shields.io/badge/NAS-training--free-critical)
+![Zero-Cost](https://img.shields.io/badge/Zero--Cost--Search-Enabled-blueviolet)
+
+![GitHub stars](https://img.shields.io/github/stars/tomomasayamasaki/RBFleX-NAS?style=social)
+
 
 ## 🟨 Download the paper
 [RBFleX-NAS: Training-Free Neural Architecture Search Using Radial Basis Function Kernel and Hyperparameter Detection](https://ieeexplore.ieee.org/document/10959729)  
