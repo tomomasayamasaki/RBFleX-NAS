@@ -1,4 +1,6 @@
-![](png/logo.png)
+<a href="https://youtu.be/QZz8s95x9xw?si=TcjrD3mC-VkeqJnM" target="_blank">
+  <img src="https://github.com/tomomasayamasaki/RBFleX-NAS/blob/main/png/logo.png" alt="YouTube" style="vertical-align: middle;"/>
+</a>
 
 <a href="https://istd.sutd.edu.sg/people/phd-students/tomomasa-yamasaki">
     <img src="https://github.com/tomomasayamasaki/LAXOR/blob/main/README/logo.png" alt="Tomo logo" title="Tomo" align="right" height="110" />
